@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Palm Beach Research Group</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css' />
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<style>
+	html, body, footer, input, button {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background-size: cover;
+	}
+
+	.question, #answers {
+		margin: 0 auto;
+		padding: 50px 0 0 0;
+		font-family: 'Roboto', Arial, sans-serif;
+	}
+	#q2, #q3, #q4, #q5, #q6, #pbrg-thank-you-note {
+		display: none;
+	}
+	.question h3, #answers h3 {
+		text-align: left;
+		text-transform: capitalize;
+		font-size: 36px;
+		color: #F46524;
+		margin: 0 0 20px 0;
+		border-bottom: 1px solid #AEB7C0;
+		padding-bottom: 8px;
+		font-family: 'Oswald', Arial, sans-serif;
+		line-height: 44px;
+	}
+	.question label, #answers label {
+		text-transform: capitalize;
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		padding-left: 25px;
+		margin-bottom: 20px;
+		font-size: 16px;
+		color: #3E3E3E;
+		line-height: 25px;
+		font-weight: normal!important;
+	}
+	input[type=radio] {
+		display: none;
+	}
+	.question label:before {
+		content: "";
+		display: inline-block;
+		width: 22px;
+		height: 22px;
+		position: absolute;
+		left: -10px;
+		background-color: #fff;
+		border-radius: 50%;
+		top: 8px;
+		border: 1px solid #AEB7C0;
+	}
+	input[type=radio] label:before {
+		border-radius: 8px;
+	}
+
+	input[type=radio]:checked + label:before {
+		content: "\2713";
+		color: #AEB7C0;
+		font-size: 36px;
+		text-align: center;
+		line-height: 12px;
+	}
+	.mybtn {
+		padding: 5px 15px;
+		display: inline-block;
+		text-align: center;
+		white-space: nowrap;
+		cursor: pointer;
+		background-image: none;
+		border: 1px solid #AEB7C0;
+		font-size: 18px;
+		background-color: #EBEDEF;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+		color: #334960;
+		margin: 0 10px;
+
+	}
+	.mybtn button:hover {
+		background-color: #E4E7E9;
+	}
+	#footer-wrapper {
+		height: 80px;
+	}
+	footer {
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		border-top: 1px solid #BBBBBB;
+		padding: 20px 0;
+		background: #334960;
+	}
+	footer p {
+		text-align: center;
+		font-family: 'Roboto', Arial, sans-serif;
+		color: #fff;
+		font-size: 15px;
+	}
+	#quesions-answered, #total-questions {
+		position: relative;
+	}
+
+	#pbrg-thank-you-note {
+		height: 100%;
+		font-size: 24px;
+		text-align: center;
+		position: absolute;
+		display: none
+	}
+	.error-holder {
+		height: 20px;
+		padding: 5px 10px;
+		display: block;
+		font-family: Arial, sans-serif;
+		font-size: 12px;
+		color: #D0484B;
+		font-weight: bold;
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		visibility:hidden;
+	}
+	#answers {
+		display: none;
+		padding: 10px;
+	}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<form class="col-lg-4 col-lg-offset-4 col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+			<div class="question" id="q1">
+				<h3>Lorem ipsum dolor sit amet, at pri iuvaret volumus prodesset 1</h3>
+				<input id="option-1" type="radio" name="question-1" value="option-1">
+				<label for="option-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt </label>
+				<br />
+				<input id="option-2" type="radio" name="question-1" value="option-2">
+				<label for="option-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  2</label>
+				<br />
+				<input id="option-3" type="radio" name="question-1" value="option-3">
+				<label for="option-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  3</label>
+				<br />
+
+			</div>
+			<div class="question" id="q2">
+				<h3>Lorem ipsum dolor sit amet, at pri iuvaret volumus prodesset 2</h3>
+				<input id="option-4" type="radio" name="question-2" value="option-4">
+				<label for="option-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  4</label>
+				<br />
+				<input id="option-5" type="radio" name="question-2" value="option-5">
+				<label for="option-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  5</label>
+				<br />
+				<input id="option-6" type="radio" name="question-2" value="option-6">
+				<label for="option-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  6</label>
+				<br />
+
+			</div>
+			<div class="question" id="q3">
+				<h3>Lorem ipsum dolor sit amet, at pri iuvaret volumus prodesset 3</h3>
+				<input id="option-7" type="radio" name="question-3" value="option-7">
+				<label for="option-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  7</label>
+				<br />
+				<input id="option-8" type="radio" name="question-3" value="option-8">
+				<label for="option-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  8</label>
+				<br />
+				<input id="option-9" type="radio" name="question-3" value="option-9">
+				<label for="option-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  9</label>
+				<br />      
+			</div>
+			<div class="question" id="q4">
+				<h3>Lorem ipsum dolor sit amet, at pri iuvaret volumus prodesset 4</h3>
+				<input id="option-10" type="radio" name="question-4" value="option-10">
+				<label for="option-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 0</label>
+				<br />
+				<input id="option-11" type="radio" name="question-4" value="option-11">
+				<label for="option-11">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 1</label>
+				<br />
+				<input id="option-12" type="radio" name="question-4" value="option-12">
+				<label for="option-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 2</label>
+				<br />
+
+
+			</div>
+			<div class="question" id="q5">
+				<h3>Lorem ipsum dolor sit amet, at pri iuvaret volumus prodesset 5</h3>
+				<input id="option-13" type="radio" name="question-5" value="option-13">
+				<label for="option-13">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 3</label>
+				<br />
+				<input id="option-14" type="radio" name="question-5" value="option-14">
+				<label for="option-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 4</label>
+				<br />
+				<input id="option-15" type="radio" name="question-5" value="option-15">
+				<label for="option-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 5</label>
+				<br />
+
+
+			</div>
+			<div class="question" id="q6">
+				<h3>Lorem ipsum dolor sit amet, at pri iuvaret volumus prodesset 6</h3>
+				<input id="option-16" type="radio" name="question-6" value="option-16">
+				<label for="option-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 6</label>
+				<br />
+				<input id="option-17" type="radio" name="question-6" value="option-17">
+				<label for="option-17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 7</label>
+				<br />
+				<input id="option-18" type="radio" name="question-6" value="option-18">
+				<label for="option-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 8</label>
+				<br />
+			</div>
+			<button class="btn mybtn col-lg-3 col-md-3 col-sm-3 col-xs-12" id="backBtn">Back</button>
+			<button class="btn mybtn col-lg-3 col-md-3 col-sm-3 col-xs-12" id="mybtn-next">Next</button>
+			<div class="error-holder" id="error"><span>You must select one option</span></div>
+		</form>
+	</div>
+	<div id="answers"></div>
+	
+	<footer>
+		<div class="container-fluid"><p><span id="quesions-answered"></span> out of <span id="total-questions"></span> questions answered</p></div>
+	</footer>
+	<script>
+	var positionQuestion = 1;
+	var Result = function(question, answer){
+		this.question = question;
+		this.answer = answer;
+	};
+	var resultsList = [];
+	var flag = false; //if error visible then true
+	$(document).ready(function(e) {
+
+		$('#total-questions').html($('.question').length);
+		$('#quesions-answered').html("0");
+
+		// $("input[type="radio"]").click(function radioClick(event){
+		// 	$(".error-holder").css("visibility", "hidden");
+		// });
+		
+		
+
+		$('#mybtn-next').click(function NextClick(event){
+			event.preventDefault();
+			idRadioChosen = $($('.question')[positionQuestion-1]).find($(":checked")).attr("id");    
+
+			/* when you select an answer all questions fade out, next question fades in and updates number of questions answered on footer*/
+
+			if($($('.question')[positionQuestion-1]).find($(":checked")).length > 0){
+
+				if(positionQuestion < $('.question').length){
+                //populate final report with questions and answers               
+                
+	                var result = new Result($($('.question')[positionQuestion-1]).find("h3").html(), 
+	                						$($('.question')[positionQuestion-1]).find($("label[for='"+idRadioChosen+"']")).html() )	
+	                resultsList.push(result);
+	               
+	                
+	                console.log(resultsList);
+	                positionQuestion++;	
+	                console.log(positionQuestion);
+	                $('.question').hide();			
+	                $($('.question')[positionQuestion-1]).fadeIn();
+	                $('#quesions-answered').html(positionQuestion);
+	             
+	                $(".error-holder").css("visibility", "hidden");	                
+	            }
+
+	            else 
+	            {
+
+	            	$("#container").hide();
+	            	ShowResults();
+	            	$("#answers").fadeIn();
+	            }
+	        }
+
+            else{
+            	$(".error-holder").css("visibility", "visible");
+            	flag = true;
+            }
+
+        });
+		
+
+		$("#backBtn").click(function goBack(event){
+			event.preventDefault();
+			 $('.question').hide();			
+             $($('.question')[positionQuestion-1]).fadeIn();
+              resultsList.pop();
+             positionQuestion--;
+		});
+
+
+		function ShowResults(){
+			for (var i = 0 ;  i < resultsList.length; i++) {
+				$("#answers").append(resultsList[i].question +":"+ " " + resultsList[i].answer +"<br>");
+			};
+		}
+
+
+
+});	
+
+
+</script>
+</body>
+</html>
